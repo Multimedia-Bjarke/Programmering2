@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Musikqiz | Quiz 2</title>
+  <link rel="stylesheet" href="css/quiz2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    
+    <!--Quiz 1 - Lofi-->
+    <section class="pageWrapper">
+      <div class="question"> <h1> Hvilken sang er dette et cover af? </h1></div>   
+
+      <div class="top_img" id="image">
+        <img id="video" src="data/gifs/polishcow.webp" width="400px" autoplay muted loop></img>
+        
+      </div>
+
+
+      <div id="musicPlayer">
+        <h2> Play Music </h2>
+      <audio controls autoplay src="data/audio/livinOnAPrayer.mp3">
+
+      </audio>
+      
+      </div>
+      
+      <div class="quiz_container">
+
+        <label><input type="radio" name="answer" value="wrong1"> Kender du den om rudolf? - Poul M. Jørgensen </label><br>
+        <label><input type="radio" name="answer" value="wrong2"> Mama said - Lukas Graham</label><br>
+        <label><input type="radio" name="answer" value="wrong3"> Boten Anna - Basshunter </label><br>
+        <label><input type="radio" name="answer" value="correct"> Living On A Prayer</label><br>
+
+
+        <br><br>
+        <button id="submitbutton" onclick="checkAnswer()">Submit Answer</button>
+
+      
+        <p id="result"></p>
+
+
+      </div>
+
+
+
+    </section>
+    
+<!-- Navigation-->
+    <section class="Navigation">
+
+      <a href="quiz3.html"><button class="nav_button">Næste spørgsmål</button></a>
+      
+      <a href="quiz2.html"><button class="nav_button" href="index.html">Prøv igen</button></a>
+      
+
+    </section>
+
+
+    <audio id="oiasound">
+      <source src="data/audio/oiacatsound.mp3" type="audio/mp3"> 
+      Your browser does not support the audio element.
+    </audio>
+    
+  </main>
+  <script src="js/js.js"></script>
+
+  <script>
+function checkAnswer() {
+    let selectedAnswer = document.querySelector('input[name="answer"]:checked');
+
+    if (!selectedAnswer) {
+        document.getElementById("result").innerText = "⚠️ Intet svar er valgt!";
+        return;
+    }
+
+    if (selectedAnswer.value === "correct") {
+        document.getElementById("result").innerHTML = "✅ Sådan - du svarede rigtigt!";
+        document.getElementById("image").innerHTML = '<img src="data/gifs/oia-uia_cat.gif" alt="Cat Gif">';
+        document.getElementById("video").setAttribute("style", "display: none;");
+        
+        // Pause the background music
+        let musicPlayer = document.querySelector('audio');
+        musicPlayer.pause();
+        
+        // Play the correct answer sound
+        let oiaSound = document.getElementById("oiasound");
+        oiaSound.play().catch(function(error) {
+            console.log("Audio playback failed: " + error);
+        });
+    } else {
+        document.getElementById("result").innerHTML = "❌ Forkert svar - prøv igen!";
+    }
+}
+
+
+</script>
+
+</body>
+</html>

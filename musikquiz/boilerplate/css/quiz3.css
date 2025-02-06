@@ -1,0 +1,89 @@
+/*Variables*/
+
+  /*Fonts*/
+  @font-face{
+    font-family: 'loFi';
+    src: url();
+  }
+
+
+body {
+    background-color: #599555;
+    color:#ffffff;
+}
+
+
+.quiz_container {
+    margin-top: 2%;
+    border: 0px solid #f57f09;
+}
+
+/*Section - Page wrapper*/
+section.pageWrapper{
+  display: flex;
+  flex-direction: column;  /* Stack items vertically */
+  align-items: center;     /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+}
+
+
+
+/*Quiz*/
+  /*Question title*/
+    h1{
+      font-size: 3rem;
+      font-family: 'Pixelify Sans';
+    }
+    
+    h2{
+        font-size: 2rem;
+        font-family: 'Pixelify Sans';
+        text-align: center;
+        margin-bottom: -2px;
+      }    
+
+    
+    .quiz_container{
+      font-family: 'Pixelify Sans';
+      font-size: 2rem;
+    }
+
+
+    main button{
+        font-family:'Pixelify Sans';
+    }
+
+.Navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+  /*Buttons*/
+  #submitbutton{
+        display: flex;
+        align-self: center;
+        margin-top: -70px;
+        margin-left: 15px;
+        color:rgb(3, 94, 3);
+        transform: scale(1.2)
+
+  }
+
+  #submitbutton:hover{
+    color:rgb(3, 94, 3);
+    background-color:rgba(0, 0, 0, 0.336);
+  }
+  .nav_button{
+    color:rgb(3, 94, 3);
+    transform: scale(1.5);
+    
+  }
+
+  .nav_button:hover{
+    color:rgb(3, 94, 3);
+    background-color:rgba(0, 0, 0, 0.336);
+    
+  }
+  

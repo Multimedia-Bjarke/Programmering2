@@ -1,0 +1,108 @@
+/*Variables*/
+
+  /*Fonts*/
+  @font-face{
+    font-family: 'loFi';
+    src: url();
+  }
+
+
+body {
+    background-color:gold;
+    color:#ffffff;
+    background: rgb(246,177,32);
+    background: linear-gradient(90deg, rgba(246,177,32,1) 0%, rgba(246,236,45,1) 25%, rgba(237,232,133,1) 50%, rgba(246,236,45,1) 75%, rgba(246,177,32,1) 100%);
+    display: flex;
+    justify-content: center;
+}
+
+#textfix{
+  font-family: 'Pixelify Sans';
+}
+.quiz_container {
+    margin-top: 2%;
+    border: 0px solid #f57f09;
+}
+
+/*Section - Page wrapper*/
+section.pageWrapper{
+  display: flex;
+  flex-direction: column;  /* Stack items vertically */
+  align-items: center;     /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+}
+
+
+
+  /*Fonts*/
+    h1{
+      font-size: 3rem;
+      font-family: 'Pixelify Sans';
+    }
+    
+    h2{
+        font-size: 2rem;
+        font-family: 'Pixelify Sans';
+        text-align: center;
+        margin-bottom: -2px;
+      }    
+
+
+    main{
+        font-family:'Pixelify Sans';
+    }
+
+
+  /*Buttons*/
+  #submitbutton{
+        display: flex;
+        align-self: center;
+        margin-top: -70px;
+        margin-left: 15px;
+       color:gold;
+        transform: scale(1.2)
+
+  }
+
+  #submitbutton:hover{
+    color:gold;
+    background-color:rgba(0, 0, 0, 0.336);
+  }
+  .nav_button{
+    color:gold;
+    transform: scale(1.5);
+    margin-top: 4rem;
+    font-family: 'Pixelify Sans';
+  }
+
+  .nav_button:hover{
+    color:gold;
+    background-color:rgba(0, 0, 0, 0.336);
+  }
+
+  /*Animations*/
+@keyframes congratz {
+    from {background-color: red;}
+    to {background-color: yellow; font-size: 5rem;}
+  }
+
+  h1{
+  animation-name: congratz;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  }
+  
+
+  #div1 {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #000; /* Adds a dashed border */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #drag1{
+    transform: scale(0.5)
+  }

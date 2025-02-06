@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Musikqiz | Quiz 1</title>
+  <link rel="stylesheet" href="css/css.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    
+    <!--Quiz 1 - Lofi-->
+    <section class="pageWrapper">
+      <div class="question"> <h1> Hvilken sang er dette et cover af? </h1></div>   
+
+      <div class="top_img" id="image">
+        <video id="video" src="data/video/lofigirlvideo.mp4" width="900px" autoplay muted loop></video>
+        
+      </div>
+
+
+      <div id="musicPlayer">
+        <h2> Play Music </h2>
+      <audio controls src="data/audio/waittobeking.mp3">
+
+      </audio>
+      
+      </div>
+      
+      <div class="quiz_container">
+
+        <label><input type="radio" name="answer" value="wrong1"> We will Rock You - Queen </label><br>
+        <label><input type="radio" name="answer" value="wrong2"> Billie Jean - Michael Jackson</label><br>
+        <label><input type="radio" name="answer" value="correct"> I Just Can't Wait to be king - Lion King </label><br>
+        <label><input type="radio" name="answer" value="wrong3"> Pas På Den Knaldrøde Gummibåd - Birthe Kjær</label><br>
+
+
+        <br><br>
+        <button id="submitbutton" onclick="checkAnswer()">Submit Answer</button>
+
+      
+        <p id="result"></p>
+
+        
+    <audio id="oiasound">
+      <source src="data/audio/oiacatsound.mp3" type="audio/mp3"> 
+
+    </audio>
+   
+
+      </div>
+
+
+
+    </section>
+    
+<!-- Navigation-->
+    <section class="Navigation">
+
+      <a href="quiz2.html"><button class="nav_button">Næste spørgsmål</button></a>
+      
+      <a href="index.html"><button class="nav_button" href="index.html">Prøv igen</button></a>
+      
+
+    </section>
+
+
+    
+  </main>
+  <script src="js/js.js"></script>
+
+  <script>
+   function checkAnswer() {
+    let selectedAnswer = document.querySelector('input[name="answer"]:checked');
+
+    if (!selectedAnswer) {
+        document.getElementById("result").innerText = "⚠️ Intet svar er valgt!";
+        return;
+    }
+
+    if (selectedAnswer.value === "correct") {
+        document.getElementById("result").innerHTML = "✅ Sådan - du svarede rigtigt!";
+        document.getElementById("image").innerHTML = '<img src="data/gifs/oia-uia_cat.gif" alt="Cat Gif">';
+        document.getElementById("video").setAttribute("style", "display: none;");
+        document.getElementById("oiasound").play();
+        
+        
+        // Play the correct answer sound (this is triggered only when the answer is correct)
+  
+    } else {
+        document.getElementById("result").innerHTML = "❌ Forkert svar - prøv igen!";
+    }
+
+
+    
+    
+      
+}
+
+
+</script>
+
+</body>
+</html>
