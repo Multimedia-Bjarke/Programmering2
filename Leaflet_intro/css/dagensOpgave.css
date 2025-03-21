@@ -1,0 +1,23 @@
+/*Fonts*/
+
+
+h1{
+    font-family: "Sixtyfour Convergence";
+    font-size: 5rem;
+}
+
+/*Map rules*/
+#map{
+    display: flex;
+    height: 50vh;
+    width: 80vw;
+    /*border: 2px solid red;*/
+    justify-self: center;
+    border-radius: 15px;
+}
+
+/*Dagens opgave descriptions*/
+#description{
+    display: block;
+    justify-items: center;
+}

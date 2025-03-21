@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Rellax</title>
+    <style>
+      main {
+        height: 200vh;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div
+        class="rellax"
+        data-rellax-speed="-7"
+        data-rellax-zindex="0"
+        id="vej"
+      >
+        <img src="images/vejHorinsontal.png" alt="vejHorinsontal" />
+      </div>
+
+      <div
+        class="rellax"
+        data-rellax-speed="-10"
+        data-rellax-zindex="1"
+        id="byskilt"
+      >
+        <img src="images/aarhusByskilt.png" alt="Byskilt" />
+      </div>
+
+      <div
+        class="rellax"
+        data-rellax-speed="0"
+        data-rellax-zindex="2"
+        id="denGamleBy"
+      >
+        <img src="images/dengamleby.png" alt="DenGamleBy" />
+      </div>
+
+      <div
+        class="rellax"
+        data-rellax-speed="6"
+        data-rellax-zindex="3"
+        id="oegaderne"
+      >
+        <img src="images/oegaderne.png" alt="Øgaderne" />
+      </div>
+
+      <div
+        class="rellax"
+        data-rellax-speed="2"
+        data-rellax-zindex="4"
+        id="domen"
+      >
+        <img src="images/domen.png" alt="Domen" />
+      </div>
+
+      <div
+        class="rellax"
+        data-rellax-speed="7"
+        data-rellax-zindex="5"
+        id="magasin"
+      >
+        <img src="images/magasinAarhus.png" alt="Magasin" />
+      </div>
+
+      <div
+        class="rellax"
+        data-rellax-speed="10"
+        data-rellax-zindex="6"
+        id="dokk1"
+      >
+        <img src="images/dokk1.png" alt="Dokk1" />
+      </div>
+
+      <div
+        class="rellax"
+        data-rellax-speed="12"
+        data-rellax-zindex="6"
+        id="aros"
+      >
+        <img src="images/aros.png" alt="aros" />
+      </div>
+
+      <div
+        class="rellax"
+        data-rellax-speed="14"
+        data-rellax-zindex="6"
+        id="aarhusBanegaard"
+      >
+        <img src="images/aarhusBanegaard.png" alt="aarhusBanegaard" />
+      </div>
+
+      <div
+        class="rellax"
+        data-rellax-speed="14"
+        data-rellax-zindex="6"
+        id="aarhusRaadhus"
+      >
+        <img src="images/aarhusRaadhus.png" alt="aarhusRaadhus" />
+      </div>
+
+      <div
+        class="rellax"
+        data-rellax-speed="8"
+        data-rellax-zindex="6"
+        id="Lighthouse"
+      >
+        <img src="images/Lighthouse.png" alt="Lighthouse" />
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script>
+      var rellax = new Rellax(".rellax", {
+        horizontal: true, // Aktiver sidelæns scrolling
+        vertical: false, // Deaktiver lodret scrolling
+        zIndex: true, // Aktiver brug af data-rellax-zindex
+      });
+    </script>
+  </body>
+</html>

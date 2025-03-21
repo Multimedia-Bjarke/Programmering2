@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Vis JSON</h1>
+    <div id="resultat"></div>
+    <!--Kalde en function i onlclick-->
+    <button onclick="tilfoej('Brygger Palles Øl')">Klik på mig nu</button>
+    <div id="nyListe"></div>
+
+    <script>
+      /Definition af JSON objekt/;
+      let produkter = {
+        name: "Amazing Hops",
+        type: "pilsner",
+        city: "Aarhus",
+        billede: "billeder/the_office_mike.jpg" /*indsæt billede som objekt*/,
+        /*Multiværdi: array inde i et array med values seperaret af komma*/
+        tags: [
+          "Ale",
+          "IPA",
+          "ECO",
+          "Weissbier",
+          "Nisseøl",
+          "Classic",
+          "Cola",
+          "Ufiltreret",
+        ],
+      };
+
+      /*Log produkter*/
+      console.log(produkter);
+
+      /*Log bestemt objekt via dot syntax */
+      console.log(produkter.name);
+
+      /*Visning af produkter.name i h2 */
+      resultat.innerHTML += "<h2>" + produkter.name + "</h2>";
+
+      /*Visning af produkter.name i h2 + bestemt produkt fra .tags [nummer i arrayet]*/
+      resultat.innerHTML +=
+        "<h2>" + produkter.name + "</h2>" + produkter.tags[1];
+
+      //Tilføjer item til arrayet via .push
+      //tilfoej("Fredagsbajer"); //fjernet midlertidig fordi vi bruger den functionen længere nede
+
+      //listen skal sorteres (skal gøres før loopet!)
+      produkter.tags.sort();
+
+      // Vi looper indholdet af arrayet ud (i = liste/array)
+      for (let i = 0; i < produkter.tags.length; i++) {
+        resultat.innerHTML += "<li>" + produkter.tags[i] + "</li>";
+      }
+      //vil vil ha elementer ind i en liste
+      resultat.innerHTML += "<ul>";
+
+      //listen afsluttes og formateres
+      resultat.innerHTML += "<ul>";
+
+      /*Indsætning af billede via mappe struktur  */
+      resultat.innerHTML +=
+        "<img src='billeder/the_office_mike.jpg'" +
+        produkter.billede +
+        "' alt='et billede'>";
+
+      //Tilføj noget til dit array via funktion
+      function tilfoej(item) {
+        produkter.tags.push(item);
+        produkter.tags.sort();
+        //Inde i funktionen laver vi en liste igen
+        // Vi looper indholdet af arrayet ud (i = liste/array)
+        for (let i = 0; i < produkter.tags.length; i++) {
+          nyListe.innerHTML += "<li>" + produkter.tags[i] + "</li>";
+        }
+        //vil vil ha elementer ind i en liste
+        nyListe.innerHTML += "<ul>";
+
+        //listen afsluttes og formateres
+        nyListe.innerHTML += "<ul>";
+      }
+    </script>
+  </body>
+</html>

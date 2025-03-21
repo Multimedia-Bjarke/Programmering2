@@ -1,0 +1,137 @@
+html, body {
+    background-image: url(/images/baggrundHimmel.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: rgba(0, 140, 255, 0.67);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+ 
+
+  
+  /* Flex main container allows horizontal scrolling */
+  main {
+    position: relative;
+    display: flex;
+    width: max-content; /* Ensures content determines width */
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap; /* Prevents content from wrapping */
+  }
+  
+  /* Objects */
+  #vej{
+    z-index: 7;
+    display: block;
+    position: absolute;
+    margin-top: 40rem;
+    z-index: 300;
+  }
+
+  #byskilt {
+    z-index: 6;
+    position: relative;
+    height: 300px;
+    width: auto;
+    top: -19rem;
+    left: -20rem;
+    z-index: 299;
+  }
+
+  #byskilt img{
+    transform: scale(0.15);
+  }
+
+  #denGamleBy img{
+    z-index: 5;
+    position: relative;
+    height: 20rem;
+    width: auto;
+    top: 20rem;
+    left: -80rem;
+    z-index: 300;
+  }
+  
+  #oegaderne img{
+    z-index: 4;
+    position: relative;
+    height: 20rem;
+    width: auto;
+    top: 22rem;
+    left: -80rem;
+    z-index: 299;
+  }
+
+  #domen img{
+    position: relative;
+    height: 20rem;
+    width: auto;
+    top: 25rem;
+    left: -150rem;
+    z-index: 298;
+  }
+
+  #magasin img{
+    z-index: 2;
+    position: relative;
+    height: 20rem;
+    width: auto;
+    top: 25rem;
+    left: -132rem;
+    z-index: 297;
+  }
+
+  #dokk1 img{
+    z-index: 1;
+    position: relative;
+    height: 20rem;
+    width: auto;
+    top: 25rem;
+    left: -150rem;
+    z-index: 297;
+  }
+
+  #aros img{
+    z-index: 0;
+    position: relative;
+    height: 40rem;
+    width: auto;
+    top: 10rem;
+    left: -170rem;
+    z-index: 297;
+  }
+
+  #aarhusBanegaard img{
+    z-index: 0;
+    position: relative;
+    height: 40rem;
+    width: auto;
+    top: 10rem;
+    left: -175rem;
+    z-index: 297;
+  }
+
+  #aarhusRaadhus img{
+    z-index: 0;
+    position: relative;
+    height: 45rem;
+    width: auto;
+    top: -2rem;
+    left: -185rem;
+    z-index: 297;
+  }
+
+  #Lighthouse img{
+    z-index: 0;
+    position: relative;
+    height: 60rem;
+    width: auto;
+    top: -15rem;
+    left: -220rem;
+    z-index: 297;
+  }
