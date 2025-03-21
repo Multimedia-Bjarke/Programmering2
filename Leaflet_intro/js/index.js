@@ -34,8 +34,8 @@ var polygon = L.polygon([
 //Popupper forbindes med variablen (.openPopup gør om den vises til start eller om man skal klikke på den - den slettes hvis det er)
     //Billeder kan også indsættes her istedet for text
 marker.bindPopup("<b>Hejsa!</b><br>Jeg er en popup.").openPopup();
-    //circle.bindPopup("I am a circle."); //Alternativ popup
-    //polygon.bindPopup("I am a polygon."); //Alternativ popup
+circle.bindPopup("I am a circle.") //Alternativ popup
+polygon.bindPopup("I am a polygon."); //Alternativ popup
 
 
 //Events kan anvendes sådan - Popup der viser hvilke koordinater man har klikket på, på kortet

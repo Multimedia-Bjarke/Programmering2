@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduktion</title>
+    <title>Non-geographical Map</title>
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap"
+      rel="stylesheet"
+    />
     <!--Link til leaflets CSS skal komme først, så vi har mulighed for lokal customization-->
     <link
       rel="stylesheet"
@@ -12,7 +20,7 @@
       crossorigin=""
     />
     <!--Lokalt CSS stylesheet-->
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/nonGeographicalMap.css" />
 
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script
@@ -24,20 +32,18 @@
 
   <body>
     <section id="description">
-      <h1>Leaflet - introduktion</h1>
-      <h2>OpenStreetmap Overlay via API</h2>
-      <h3>
-        Sådan ser kortet ud når man følger quickstartguiden via
-        <a href="https://leafletjs.com/examples/quick-start/">leafletjs.com</a>
-      </h3>
+      <h1>Non-geographical map og CRS</h1>
 
-      <h3><a href="dagensOpgave.html">Dagens Opgave</a></h3>
+      <h3>
+        <a href="/index.html">Tilbage til forsiden</a>
+        <a href="/dagensOpgave.html">Tilbage til Dagens Opgave</a>
+      </h3>
     </section>
 
     <!--aside = ekstra boks fra avisens verden-->
     <aside id="map"></aside>
 
     <!--Man kan også bruge script defer og indsætte linket i headeren i stedet-->
-    <script src="js/index.js"></script>
+    <script src="js/nonGeographicalMap.js"></script>
   </body>
 </html>
